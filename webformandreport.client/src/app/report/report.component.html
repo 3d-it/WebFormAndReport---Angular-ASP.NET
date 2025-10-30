@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <h2>Product Reviews Report</h2>
+  <table class="table table-striped table-bordered text-center">
+    <thead class="table-dark">
+      <tr>
+        <th>Product</th>
+        <th>Great Reviews</th>
+        <th>Bad Reviews</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of report">
+        <td>{{ item.product }}</td>
+        <td>{{ item.greatReviews }}</td>
+        <td>{{ item.badReviews }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

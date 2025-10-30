@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <h2>Submit Feedback</h2>
+
+  <form (ngSubmit)="submitForm()" #feedbackForm="ngForm">
+    <div class="mb-3">
+      <label>Name</label>
+      <input type="text" class="form-control" [(ngModel)]="form.name" name="name" required />
+    </div>
+
+    <div class="mb-3">
+      <label>Email</label>
+      <input type="email" class="form-control" [(ngModel)]="form.email" name="email" required />
+    </div>
+
+    <div class="mb-3">
+      <label>Product</label>
+      <input type="text" class="form-control" [(ngModel)]="form.product" name="product" required />
+    </div>
+
+    <div class="mb-3">
+      <label>Message</label>
+      <textarea class="form-control" [(ngModel)]="form.message" name="message" required></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+
+  <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+</div>
